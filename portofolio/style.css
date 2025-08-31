@@ -1,0 +1,581 @@
+/* Navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "josefin sans", sans-serif;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@200;400; 700&display=swap');
+
+html {
+ scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+nav {
+  position: fixed ;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: black;
+  z-index: 1000;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 50px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+}
+nav ul li a:hover {
+  color:  rgb(5, 65, 248);
+  transition: 0.3s;
+}
+/*hero*/   
+.hero-image {
+  background-image:  url(foto\ gua.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image .hero-text {
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "josefin sans" , sans-serif;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+.hero-text p {
+  font-size: 30px ;
+  font-weight: 500;
+  line-height: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+/* about you */
+.about-section {
+  padding: 60px 10%;
+  text-align: center;
+  background: #f8faff;
+}
+
+.about-section .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.about-section .title h1 {
+  font-size: 45px;
+  color: rgb(5, 65, 248);
+}
+
+.about-section .title hr {
+  flex: 1;
+  border: none;
+  height: 3px;
+  background: rgb(5, 65, 248);
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 280px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.highlight {
+  color: rgb(5, 65, 248);
+  font-weight: bold;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
+
+/* skils */
+.skills-section {
+  padding: 60px 10%;
+  background: #fff;
+  text-align: center;
+  scroll-margin-top: 100px; 
+}
+
+.skills-section .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skills-section .title h1 {
+  font-size: 45px;
+  color: rgb(5, 65, 248);
+}
+
+.skills-section .title hr {
+  flex: 1;
+  border: none;
+  height: 3px;
+  background: rgb(5, 65, 248);
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #333;
+}
+
+.progress-bar {
+  background: #e4e9f7;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 30px;
+  position: relative;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, rgb(5,65,248), rgb(0,190,255));
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 12px;
+  border-radius: 20px;
+  animation: grow 2s ease forwards;
+  width: calc(var(--value) * 1%);
+}
+
+@keyframes grow {
+  from { width: 0%; }
+  to { width: calc(var(--value) * 1%); }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 5%;
+  }
+  .skills-section .title h1 {
+    font-size: 35px;
+  }
+  .progress-bar {
+    height: 25px;
+  }
+}
+/* resume */
+.resume-section {
+  padding: 60px 10%;
+  background: #f8faff;
+  margin-top: 80px; /* jarak dari Skills */
+  scroll-margin-top: 100px; /* offset buat navbar */
+}
+
+.resume-section .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.resume-section .title h1 {
+  font-size: 45px;
+  color: rgb(5, 65, 248);
+  text-transform: uppercase;
+}
+
+.resume-section .title hr {
+  flex: 1;
+  border: none;
+  height: 3px;
+  background: rgb(5, 65, 248);
+}
+
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.resume-block {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+}
+
+.resume-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(5, 65, 248);
+  border-left: 5px solid rgb(5, 65, 248);
+  padding-left: 10px;
+}
+
+.resume-item h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.resume-item p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Timeline Style */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 3px solid rgb(5, 65, 248);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  background: rgb(5, 65, 248);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.timeline-content h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+  margin-left: 12px;
+}
+
+.timeline-content h5 {
+  font-size: 15px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 40px 5%;
+  }
+  .resume-section .title h1 {
+    font-size: 35px;
+  }
+  .resume-block {
+    padding: 20px;
+  }
+  .timeline {
+    margin-left: 10px;
+    padding-left: 15px;
+  }
+}
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+
+/*portofolio*/
+/* Section */
+.portfolio-section {
+  padding: 60px 10%;
+  background: #fff;
+  text-align: center;
+  scroll-margin-top: 120px;
+}
+
+.portfolio-section .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.portfolio-section .title h1 {
+  font-size: 45px;
+  color: rgb(5, 65, 248);
+}
+
+.portfolio-section .title hr {
+  flex: 1;
+  border: none;
+  height: 3px;
+  background: rgb(5, 65, 248);
+}
+
+/* Grid 4 atas – 4 bawah */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 25px;
+}
+
+/* Card */
+.container-portofolio {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 20px; /* jarak antar gambar */
+  max-width: 1000px;
+}
+
+.portfolio-grid article img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* optional, biar lebih estetik */
+}
+
+
+/* Hover Effect */
+.portfolio-grid article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+
+.portfolio-grid article:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 kolom */
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* HP: 1 kolom */
+  }
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 40px 5%;
+  }
+  .portfolio-section .title h1 {
+    font-size: 35px;
+  }
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.footer {
+  background-color: #040a18;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+ 
+  footer {
+    position: static;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+
+.footer h3 {
+  color: #f5f5f5;
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: Georgia, "Time New Roman", Times, serif;
+}
+
+.footer .footer-copyright {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  padding-top: 10%;
+}
+.footer .footer-center {
+  width: 35%;
+}
+.footer .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+.footer .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0px;
+}
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer .footer-center p a {
+  color: rgb(22, 255, 177);
+  text-decoration: none;
+}
+.footer .footer-right {
+  width: 30%;
+}
+.footer .footer-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0px;
+}
+.footer .footer-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer .footer-media {
+  margin-top: 25px;
+}
+.footer .footer-media a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 50px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.footer .footer-media a:hover {
+  background-color: rgb(0, 122, 82);
+}
